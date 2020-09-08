@@ -15,7 +15,8 @@ export class BeerService {
   constructor(private $http: HttpClient) { }
 
   getBeers(filter: Filter){
-    let url = "https://api.punkapi.com/v2/?brewed_before=" + filter.brewed_before + "&brewed_after=" + filter.brewed_after;
+    let url = "https://api.punkapi.com/v2/beers?brewed_before=";
+    url += (filter.brewed_before.getMonth() + "-" + filter.brewed_before.getFullYear() + "&brewed_after=" + filter.brewed_after.getMonth() + "-" + filter.brewed_after.getFullYear());
 
     filter.abv != null && filter.abvLessOrGreater === "greaterThan" ? url += ("&abv_gt=" + filter.abv) : [/*do nothing */];
     filter.abv != null && filter.abvLessOrGreater === "lessThan" ? url += ("&abv_lt=" + filter.abv) : [/*do nothing */];
@@ -35,6 +36,7 @@ export class BeerService {
       return throwError(error);
     }))
     .subscribe((response: Beer[])=>{
+      console.log(response);
         this.beersSource.next(response);
     });
   }

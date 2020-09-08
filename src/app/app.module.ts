@@ -7,6 +7,7 @@ import { FilterBarComponent } from './components/filter-bar/filter-bar.component
 import { ListOfBeersComponent } from './components/list-of-beers/list-of-beers.component';
 import { BeerComponent } from './components/beer/beer.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     NgbModule
   ],
   providers: [],

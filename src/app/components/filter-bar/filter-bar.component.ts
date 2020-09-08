@@ -26,6 +26,7 @@ export class FilterBarComponent implements OnInit {
   constructor(private beerService: BeerService) { }
 
   ngOnInit(): void {
+    this.filterBeers();
   }
 
   filterBeers(){
