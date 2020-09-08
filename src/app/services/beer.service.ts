@@ -36,7 +36,6 @@ export class BeerService {
       return throwError(error);
     }))
     .subscribe((response: Beer[])=>{
-      console.log(response);
         this.beersSource.next(response);
     });
   }

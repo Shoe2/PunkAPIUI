@@ -9,6 +9,8 @@ import { Filter } from 'src/app/classes/filter';
 })
 export class FilterBarComponent implements OnInit {
   title = 'Punk API UI';
+  isCollapsed = false;
+
   abv: number = null;
   ibu: number = null;
   ebc: number = null;

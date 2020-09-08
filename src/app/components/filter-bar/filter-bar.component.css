@@ -5,3 +5,10 @@
 .navbar-nav-scroll {
     width: 100%;
 }
+
+.hamburger-menu-line{
+    width: 8vw;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
