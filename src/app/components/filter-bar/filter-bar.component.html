@@ -5,7 +5,7 @@
     <div class="navbar-nav-scroll">
       <form>
         <div class="form-row">
-          <div class="col-2 abv-form">
+          <div class="col-lg-2 col-sm-12 abv-form">
             <div class="row">
               <div class="col-3">
                 <label>
@@ -23,9 +23,9 @@
               </div>
             </div>
           </div>
-          <div class="col-2 ibu-form">
+          <div class="col-lg-2 col-sm-12 ibu-form">
             <div class="row">
-              <div class="col-2">
+              <div class="col-3">
                 <label>
                   IBU:
                 </label>
@@ -36,12 +36,12 @@
                   <option value="greaterThan">&gt;</option>
                 </select>
               </div>
-              <div class="col-5">
+              <div class="col-4">
                 <input type="number" class="form-control" placeholder="#" [(ngModel)]="ibu" name="ibu" (ngModelChange)="filterBeers()" />
               </div>
             </div>
           </div>
-          <div class="col-2 ebc-form">
+          <div class="col-lg-2 col-sm-12 ebc-form">
             <div class="row">
               <div class="col-3">
                 <label>
@@ -59,13 +59,13 @@
               </div>
             </div>
           </div>
-          <div class="col-3 brewed-before">
+          <div class="col-lg-3 col-sm-12 brewed-before">
             <label>
               Brewed Before:
             </label>
             <input class="form-control" type="date" id="brewed-before" name="brewed-before" [(ngModel)]="brewed_before" (ngModelChange)="filterBeers()" />
           </div>
-          <div class="col-3 brewed-after">
+          <div class="col-lg-3 col-sm-12 brewed-after">
             <label>
               Brewed After:
             </label>
@@ -73,25 +73,25 @@
           </div>
         </div>
         <div class="form-row">
-          <div class="col-3 yeast-type">
+          <div class="col-lg-3 col-sm-12 yeast-type">
             <label>
               Yeast Type:
             </label>
             <input type="number" class="form-control" placeholder="Enter Yeast Type" [(ngModel)]="yeast" name="yeast" (ngModelChange)="filterBeers()" />
           </div>
-          <div class="col-3 hops-type">
+          <div class="col-lg-3 col-sm-12 hops-type">
             <label>
               Hops Type:
             </label>
             <input type="text" class="form-control" placeholder="Enter Hops Type" [(ngModel)]="hops" name="hops" (ngModelChange)="filterBeers()">
           </div>
-          <div class="col-3 malt-type">
+          <div class="col-lg-3 col-sm-12 malt-type">
             <label>
               Malt Type:
             </label>
             <input type="text" class="form-control" placeholder="Enter Malt Type" [(ngModel)]="malt" name="malt" (ngModelChange)="filterBeers()">
           </div>
-          <div class="col-3 malt-type">
+          <div class="col-lg-3 col-sm-12 malt-type">
             <label>
               Food Paring:
             </label>
