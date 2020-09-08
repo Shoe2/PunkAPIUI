@@ -1,1 +1,3 @@
-<p>list-of-beers works!</p>
+<div class="beers-list" *ngFor="let beer of beers">
+    <beer [beer]="beer"></beer>
+</div>
