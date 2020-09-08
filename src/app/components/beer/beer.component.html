@@ -4,7 +4,7 @@
         <h6 class="card-subtitle mb-2 text-muted">{{beer.tagline}}</h6>
         <div class="row">
             <div class="col-6">
-                <img [src]="beer.image_url" class="img-responsive" width="100%" />
+                <img [src]="beer.image_url" class="img-responsive beer-image" />
             </div>
             <div class="col-6">
                 <div class="card-text">{{beer.first_brewed}}</div>
@@ -34,25 +34,36 @@
                 </table>
 
             </div>
-            <div class="card-body">
-                <p class="card-text">
-                    <span class="font-weight-bold">Ingredients:</span> {{beer.ingredients}}
-                </p>
+            <div class="card-body text-center">
+                <div class="card-text">
+                    <span class="font-weight-bold">Ingredients:</span> 
+                    <ul>
+                        <li *ngFor="let malt of beer.ingredients.malt">
+                            {{malt.name}} ({{malt.amount.value}} {{malt.amount.unit}})
+                        </li>
+                        <li *ngFor="let hop of beer.ingredients.hops">
+                            {{hop.name}} ({{hop.amount.value}} {{hop.amount.unit}})
+                        </li>
+                        <li>
+                            {{beer.ingredients.yeast}}
+                        </li>
+                    </ul>
+                </div>
 
                 <p class="card-text">
                     {{beer.description}}
                 </p>
                 <div class="card-text">
-                    Food Parings:
+                    <span class="font-weight-bold">Food Parings:</span>
                     <ul>
                         <li *ngFor="let food of beer.food_pairing">
                             {{food}}
                         </li>
                     </ul>
                     <div>
-                        Contrubuted by: {{beer.contributed_by}}
+                        <span class="font-weight-bold">Contrubuted by:</span> {{beer.contributed_by}}
                     </div>
-                </div>>
+                </div>
             </div>
         </div>
     </div>
