@@ -2,12 +2,12 @@
     <div class="card-body">
         <h5 class="card-title">{{beer.name}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{beer.tagline}}</h6>
+        <div class="card-text">First Brewed: {{beer.first_brewed}}</div>
         <div class="row">
             <div class="col-6">
                 <img [src]="beer.image_url" class="img-responsive beer-image" />
             </div>
             <div class="col-6">
-                <div class="card-text">{{beer.first_brewed}}</div>
                 <table class="table">
                     <tbody>
                         <tr>
