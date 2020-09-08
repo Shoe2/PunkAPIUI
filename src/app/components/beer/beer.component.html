@@ -1,1 +1,58 @@
-<p>beer works!</p>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{beer.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{beer.tagline}}</h6>
+        <div class="row">
+            <div class="col-6">
+                <img [src]="beer.image_url" />
+            </div>
+            <div class="col-6">
+                <div class="card-text">{{beer.first_brewed}}</div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Abv</th>
+                            <td>{{beer.abv}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">IBU</th>
+                            <td>{{beer.ibu}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">EBC</th>
+                            <td>{{beer.ebc}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">pH</th>
+                            <td>{{beer.ph}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Volume</th>
+                            <td>{{beer.volume}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="card-text">
+                    Ingredients: {{beer.ingredients}}
+                </p>
+
+                <p class="card-text">
+                    {{beer.description}}
+                </p>
+                <div class="card-text">
+                    Food Parings:
+                    <ul>
+                        <li *ngFor="let food of beer.food_pairing">
+                            {{food}}
+                        </li>
+                    </ul>
+                    <div>
+                        Contrubuted by: {{beer.contributed_by}}
+                    </div>
+                </div>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+</div>
