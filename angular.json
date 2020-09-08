@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PunkAPIUI"
+    }
+  },
+  "defaultProject": "PunkAPIUI",
+  "cli": {
+    "analytics": "8b6dbb27-06e5-4077-8028-48177105ff8b"
+  }
 }
